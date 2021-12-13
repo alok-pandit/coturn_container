@@ -12,15 +12,17 @@ no-sslv3
 no-tlsv1
 no-tlsv1_1
 no-tlsv1_2
-# proc-group=mobylogic
-# proc-user=mobylogic
+proc-group=turnserver
+proc-user=turnserver
 mobility
 max-allocate-timeout=180
 no-dtls
 no-tls
+no-cli
+cli-password=2waay@1234
 user=2waay:2waay@1234
+userdb=/usr/local/etc/turnuserdb.conf
 verbose
-user="":""
 no-stdout-log"  | tee /etc/turnserver.conf
 
 # turnadmin -a
