@@ -23,7 +23,7 @@ verbose
 user="":""
 no-stdout-log"  | tee /etc/turnserver.conf
 
-turnadmin -a
+# turnadmin -a
 
 echo "Starting TURN/STUN server"
 
