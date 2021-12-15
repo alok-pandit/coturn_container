@@ -23,11 +23,10 @@ cli-password=2waay@1234
 lt-cred-mech
 user=2waay:2waay@1234
 userdb=/usr/local/etc/turnuserdb.conf
-verbose
 Verbose"  | tee /etc/turnserver.conf
 
 # turnadmin -a
 
 echo "Starting TURN/STUN server"
 
-sudo turnserver -a -v -L 0.0.0.0 --server-name "${TURN_SERVER_NAME}" --realm=${TURN_REALM} --min-port ${TURN_PORT_START} --max-port ${TURN_PORT_END}
+turnserver -a -v -L 0.0.0.0 --server-name "${TURN_SERVER_NAME}" --realm=${TURN_REALM} --min-port ${TURN_PORT_START} --max-port ${TURN_PORT_END}
