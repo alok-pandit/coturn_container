@@ -3,9 +3,9 @@ internalIp="$(ip a | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0
 externalIp="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 
 echo "listening-port=3478
-listening-ip="$internalIp"
-relay-ip="$internalIp"
-external-ip="$externalIp/$internalIp"
+# listening-ip="$internalIp"
+# relay-ip="$internalIp"
+# external-ip="$externalIp/$internalIp"
 stale-nonce=600
 no-sslv2
 no-sslv3
@@ -20,10 +20,11 @@ no-dtls
 no-tls
 no-cli
 cli-password=2waay@1234
+lt-cred-mech
 user=2waay:2waay@1234
 userdb=/usr/local/etc/turnuserdb.conf
 verbose
-no-stdout-log"  | tee /etc/turnserver.conf
+Verbose"  | tee /etc/turnserver.conf
 
 # turnadmin -a
 
